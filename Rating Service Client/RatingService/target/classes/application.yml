@@ -1,0 +1,29 @@
+
+        
+spring:
+  application:
+    name: RATING-SERVICE
+  data:
+    mongodb:
+      authentication-database: admin
+      database: microservices
+      port: 27017
+      host: localhost
+  config:
+    import: optional:configserver:http://localhost:8085  
+  
+  profiles:
+    active: prod 
+    
+server:
+  port: 8083
+  
+  
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#      register-with-eureka: true
+#      fetch-registry: true
+#      service-url:
+#        defaultZone: http://localhost:8761/eureka
